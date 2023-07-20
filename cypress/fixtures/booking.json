@@ -1,0 +1,76 @@
+{
+  "body": {
+    "bookingid": 4677,
+    "booking": {
+      "firstname": "Érica",
+      "lastname": "O",
+      "totalprice": 142,
+      "depositpaid": true,
+      "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2020-01-01"
+      }
+    }
+  },
+  "headers": {
+    "server": "Cowboy",
+    "connection": "keep-alive",
+    "x-powered-by": "Express",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "166",
+    "etag": "W/\"a6-rRR0Z3zMprWLg8uhZkzelEjxIIA\"",
+    "date": "Thu, 20 Jul 2023 00:01:55 GMT",
+    "via": "1.1 vegur"
+  },
+  "status": 200,
+  "statusText": "OK",
+  "isOkStatusCode": true,
+  "requestHeaders": {
+    "Connection": "keep-alive",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.10.0 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36",
+    "accept": "*/*",
+    "accept-encoding": "gzip, deflate",
+    "content-type": "application/json",
+    "content-length": 137
+  },
+  "requestBody": "{\"firstname\":\"Érica\",\"lastname\":\"O\",\"totalprice\":142,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2018-01-01\",\"checkout\":\"2020-01-01\"}}",
+  "duration": 176,
+  "allRequestResponses": [
+    {
+      "Request Body": "{\"firstname\":\"Érica\",\"lastname\":\"O\",\"totalprice\":142,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2018-01-01\",\"checkout\":\"2020-01-01\"}}",
+      "Request Headers": {
+        "Connection": "keep-alive",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.10.0 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36",
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": 137
+      },
+      "Request URL": "https://restful-booker.herokuapp.com/booking",
+      "Response Body": {
+        "bookingid": 4677,
+        "booking": {
+          "firstname": "Érica",
+          "lastname": "O",
+          "totalprice": 142,
+          "depositpaid": true,
+          "bookingdates": {
+            "checkin": "2018-01-01",
+            "checkout": "2020-01-01"
+          }
+        }
+      },
+      "Response Headers": {
+        "server": "Cowboy",
+        "connection": "keep-alive",
+        "x-powered-by": "Express",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "166",
+        "etag": "W/\"a6-rRR0Z3zMprWLg8uhZkzelEjxIIA\"",
+        "date": "Thu, 20 Jul 2023 00:01:55 GMT",
+        "via": "1.1 vegur"
+      },
+      "Response Status": 200
+    }
+  ]
+}
