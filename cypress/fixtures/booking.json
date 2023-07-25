@@ -1,6 +1,6 @@
 {
   "body": {
-    "bookingid": 4677,
+    "bookingid": 798,
     "booking": {
       "firstname": "Érica",
       "lastname": "O",
@@ -17,9 +17,9 @@
     "connection": "keep-alive",
     "x-powered-by": "Express",
     "content-type": "application/json; charset=utf-8",
-    "content-length": "166",
-    "etag": "W/\"a6-rRR0Z3zMprWLg8uhZkzelEjxIIA\"",
-    "date": "Thu, 20 Jul 2023 00:01:55 GMT",
+    "content-length": "165",
+    "etag": "W/\"a5-HmRW8RXZs6lvv3hkdsjwUZE6Mcg\"",
+    "date": "Tue, 25 Jul 2023 03:53:57 GMT",
     "via": "1.1 vegur"
   },
   "status": 200,
@@ -34,7 +34,7 @@
     "content-length": 137
   },
   "requestBody": "{\"firstname\":\"Érica\",\"lastname\":\"O\",\"totalprice\":142,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2018-01-01\",\"checkout\":\"2020-01-01\"}}",
-  "duration": 176,
+  "duration": 180,
   "allRequestResponses": [
     {
       "Request Body": "{\"firstname\":\"Érica\",\"lastname\":\"O\",\"totalprice\":142,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2018-01-01\",\"checkout\":\"2020-01-01\"}}",
@@ -48,7 +48,7 @@
       },
       "Request URL": "https://restful-booker.herokuapp.com/booking",
       "Response Body": {
-        "bookingid": 4677,
+        "bookingid": 798,
         "booking": {
           "firstname": "Érica",
           "lastname": "O",
@@ -65,9 +65,9 @@
         "connection": "keep-alive",
         "x-powered-by": "Express",
         "content-type": "application/json; charset=utf-8",
-        "content-length": "166",
-        "etag": "W/\"a6-rRR0Z3zMprWLg8uhZkzelEjxIIA\"",
-        "date": "Thu, 20 Jul 2023 00:01:55 GMT",
+        "content-length": "165",
+        "etag": "W/\"a5-HmRW8RXZs6lvv3hkdsjwUZE6Mcg\"",
+        "date": "Tue, 25 Jul 2023 03:53:57 GMT",
         "via": "1.1 vegur"
       },
       "Response Status": 200
