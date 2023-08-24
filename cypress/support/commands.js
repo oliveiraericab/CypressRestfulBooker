@@ -8,6 +8,8 @@ Cypress.Commands.add('autentica', (username, password) => {
                 username,
                 password
             }   
+        }).then(({ body }) => {
+            window.localStorage.setItem('token', body.token)
         })
     }, { cacheAcrossSpecs: true })
 }) 

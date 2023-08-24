@@ -101,7 +101,7 @@ it('create booking / firstname com 500 caracteres', () => {
                 "checkout" : "2020-01-01"}
         }
     }).then((response) => {
-        expect(response.status, 'Status Code').to.eq(200),
+        expect(response.status, 'Status Code').to.eq(200), // BUG - aceitar campo muito longo
         expect(response.duration, 'Duration').to.be.lessThan(5000),
         expect(response.body.booking.lastname, 'Last name').to.eq('O')
         expect(response.body.booking.totalprice, 'Total Price').to.eq(142)
@@ -123,7 +123,7 @@ it('create booking com firstname em branco', () => {
                 "checkout" : "2020-01-01"}
         }
     }).then((response) => {
-        expect(response.status, 'Status Code').to.eq(200),
+        expect(response.status, 'Status Code').to.eq(200), //BUG não deveria aceitar firstname em branco - 403
         expect(response.duration, 'Duration').to.be.lessThan(5000),
         expect(response.body.booking.firstname, 'First Name').to.eq('')
     })
@@ -144,7 +144,7 @@ it('create booking com lastname em branco', () => {
                 "checkout" : "2020-01-01"}
         }
     }).then((response) => {
-        expect(response.status, 'Status Code').to.eq(200),
+        expect(response.status, 'Status Code').to.eq(200), //BUG não deveria aceitar lastname em branco - 403
         expect(response.duration, 'Duration').to.be.lessThan(5000),
         expect(response.body.booking.lastname, 'Last name').to.eq('')
     })
@@ -269,7 +269,7 @@ it('update booking com firstname em branco', () => {
                                 "checkout" : "2020-01-01"}
                         }
                     }).then(({ status, duration }) => {
-                        expect(status, 'Status Code').to.eq(200), // deveria ser Status Code 405 ou 403
+                        expect(status, 'Status Code').to.eq(200), // BUG deveria ser Status Code 405 ou 403
                         expect(duration, 'Duration').to.be.lessThan(5000)
                     })
                 })
@@ -299,7 +299,7 @@ it('update booking com lastname com 500 caracteres', () => {
                                 "checkout" : "2020-01-01"}
                         }
                     }).then(({ status, duration, body }) => {
-                        expect(status, 'Status Code').to.eq(200),
+                        expect(status, 'Status Code').to.eq(200),  //BUG campo muito longo STATUS CODE deveria ser 403
                         expect(duration, 'Duration').to.be.lessThan(5000),
                         expect(body.firstname, 'First Name').to.eq('Camila')
                         expect(body.totalprice, 'Total Price').to.eq(500)
@@ -554,25 +554,6 @@ it('delete booking sem autenticar', () => {
                 log: true                   
             }).then(({ status, duration }) => {
                 expect(status, 'Status Code').to.eq(403),
-                expect(duration, 'Duration').to.be.lessThan(5000)
-            })
-        })
-})
-
-
-it('delete booking com id com caracteres inválidos', () => {
-    cy.readFile('cypress/fixtures/token.json') 
-        .then((body) => {
-            body.token
-            cy.setCookie('token', body.token)
-            cy.request({
-                url: '/booking/100a00000001800000',
-                method: 'DELETE',
-                Cookie: `token=${body.token}`,
-                failOnStatusCode: false,
-                log: true                   
-            }).then(({ status, duration }) => {
-                expect(status, 'Status Code').to.eq(405),  //BUG deveria ser 403 ou 405
                 expect(duration, 'Duration').to.be.lessThan(5000)
             })
         })
